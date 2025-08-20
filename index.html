@@ -3,35 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALERTA DE FESTA!</title>
+    <title>Convite Confidencial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Convocação Oficial</h1>
-        <p class="subtitulo">Para a celebração anual do meu glorioso nascimento.</p>
-    
-        <img src="https://media.giphy.com/media/l2JDiane26QQA22ru/giphy.gif" alt="Pessoas dançando na balada">
-    
-        <h2>A Operação: Aniversário do(a) [SEU NOME]</h2>
-    
-        <p>Atenção, Recruta! Fui informado que meu aniversário real é dia 27/08, mas o QG (Quartel General da Bagunça) marcou a operação principal para o fim de semana, visando otimizar a alegria e o potencial de ressaca.</p>
-    
-        <div class="info-box">
-          <p><strong>🗓️ Data:</strong> Sábado, 30 de Agosto de 2025</p>
-          <p><strong>⏰ Horário de Infiltração:</strong> A partir das 21h</p>
-          <p><strong>📍 Ponto de Encontro Secreto:</strong> Meu QG (meu endereço). Se você não sabe, significa que sua autorização de segurança é baixa. Me chame no privado para obter as coordenadas.</p>
-          <p><strong>👕 Traje Obrigatório:</strong> O que te deixar confortável para dançar esquisito e comer até passar mal.</p>
+    <div id="landing-page" class="visible">
+        <div class="landing-content">
+            <h1 class="typing-effect">ARQUIVO CONFIDENCIAL</h1>
+            <p>insira seu nome abaixo👍</p>
+            <div id="login-area">
+                <input type="text" id="codigo-input" placeholder="Insira seu código de acesso...">
+                <button id="login-btn">Acessar</button>
+                <p id="error-msg" class="error-msg"></p>
+            </div>
         </div>
-    
-        <hr>
-    
-        <h3>Interações Táticas:</h3>
-        <button id="confirmarBtn">Confirmar presença (missão aceita)</button>
-        <button id="desculpaBtn">Inventar uma desculpa esfarrapada</button>
-        <p id="mensagemFinal" class="segredo"></p>
-    
+    </div>
+
+    <div id="main-content" class="hidden">
+        <div class="container">
+            
+            <div id="welcome-area">
+                </div>
+
+            <h2>A Comemoração</h2>
+            <p>É isso mesmo, mais uma confraternização anual do meu nascimento está chegandinho! Meu aniversário não é na data, mas decidi que a fazer um churras no fim de semana com a galera</p>
+            <div class="info-box">
+                <p><strong>🗓️ Data:</strong> Sábado, 30 de Agosto de 2025</p>
+                <p><strong>⏰ Horário:</strong> A partir das 19h (por favor, não chegue na hora)</p>
+                <p><strong>📍 Local:</strong> In my house de Osório Town</p>
+            </div>
+
+            <div id="confirmation-area">
+                </div>
+
+            <hr>
+
+            <div class="presentes-section">
+                <h3>Sugestões de Presente</h3>
+                <p class="cliche">"Sua presença já é o maior presente, blablabla"</p>
+                <p>Mas caso assim, queira muito me presentear, como não quer nada...</p>
+                
+                <ul class="lista-presentes">
+                    <li>🧉 artigos e coisarada pra mate (erva, cuia, bomba...)</li>
+                    <li>☕ coisas para preparo de café (ou próprio café)</li>
+                    <li>🧴 Kit Phytoervas Controle da Oleosidade Shampoo 250 ml + Condicionador 250 ml</li>
+                </ul>
+
+                <div class="vaquinha-container">
+                    <h4>⭐ O PRESENTE DOS SONHOS ⭐</h4>
+                    <p>Agora, se a ideia é me fazer o cara mais feliz do mundo (mas tipo, FELIZ MESMO), que tal essa sugestão: juntar a galera para um presente em conjunto</p>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://img.centauro.com.br/products/994877/cor/K5/large/camisa-do-gremio-ii-25-torcedor-umbro-masculina.jpg" alt="Camisa do Grêmio II 25/26">
+                        </div>
+                        <div class="product-info">
+                            <h5>Camisa Grêmio II 25/26 Umbro Torcedor</h5>
+                            <p class="price">R$ 299,99</p>
+                            <a href="https://www.centauro.com.br/camisa-do-gremio-ii-25-torcedor-umbro-masculina-994877.html?cor=K5" target="_blank" class="product-link">Ver no site da Centauro</a>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Apoio popular para a "Operação Camiseta":</strong></p>
+                    <div class="poll">
+                        <div class="progress-bar">
+                            <div id="inner-bar" class="inner-bar"></div>
+                        </div>
+                        <p id="poll-stats" class="stats"><strong>17 de 20</strong> convidados já apoiam esta causa!</p>
+                    </div>
+                    
+                    <button id="apoiarVaquinhaBtn">EU APOIO A VAQUINHA!</button>
+                    <p id="vaquinha-resposta" class="vaquinha-resposta"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-confirmacao" class="modal-overlay">
+        <div class="modal-content">
+            <h3 id="modal-titulo">E aí, [Nome do Convidado]?</h3>
+            <p id="modal-pergunta">Conto com a sua presença?</p>
+            <div class="modal-botoes">
+                <button id="modal-sim">Com certeza!</button>
+                <button id="modal-nao">Dessa vez não vai dar...</button>
+            </div>
+            <p id="modal-resposta"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>
