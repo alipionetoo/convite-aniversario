@@ -23,6 +23,12 @@ const convidados = [
     { codigo: 'macaco', nome: 'Gabriel', foto: 'fotos/gabriel.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do meu PRIMO ALIPIO', msgNao: 'sou um baita corno e não vou pq sou corno (muito corno) e vou falar que agosto não dá (mesmo sendo o penultimo dia de agosto)' },
     { codigo: 'marcos', nome: 'Marcola', foto: 'fotos/marcos.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO ALIPIO', msgNao: 'sou um baita corno e não vou pq sou corno (muito corno)' },
     { codigo: 'gustavo', nome: 'Gustavo, A.K.A Guga', foto: 'fotos/gustavo.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO ALIPIO', msgNao: 'sou um baita corno e não vou pq sou corno (muito corno)' },
+    { codigo: 'brenda', nome: 'Brenda Maravilha', foto: 'fotos/brenda.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNÍFICO ALIPIO', msgNao: 'sou uma baita corna e não vou pq sou corna (muito corna)' },
+    { codigo: 'carla', nome: 'Carlota', foto: 'fotos/carla.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNÍFICO ALIPIO, meu maior amigo de todo que eu amo muitooo', msgNao: 'sou uma baita corna e não vou pq sou corna (muito corna)' },
+    { codigo: 'maria', nome: 'Malu', foto: 'fotos/malu.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNÍFICO ALIPIO, meu maior amigo de todo que eu amo muitooo', msgNao: 'sou uma baita corna e não vou pq sou corna (muito corna, um tanto mais que a Laura)' },
+    { codigo: 'matheus', nome: 'Matheus', foto: 'fotos/matheus.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNÍFICO ALIPIO, meu maior amigo de todo que eu amo muitooo', msgNao: 'sou uma baita corna e não vou pq sou corna (muito corna, um tanto mais que a Laura)' },
+    { codigo: 'joana', nome: 'Joana, vulgo irmã', foto: 'fotos/joana.jpg', msgSim: 'óbvio que vou né, como não vou no aniversario do MAGNÍFICO irmão meu ALIPIO (o maior)', msgNao: 'sou uma baita corna e não vou pq sou corna (muito corna) e odeio meu irmão' },
+    { codigo: 'manoel', nome: 'Tita', foto: 'fotos/tita.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do meu afilhado (o maior)', msgNao: 'sou uma baita corno também e não vou pq sou corno (muito corno, mais que a joana)' },
 ];
 
 // ===================================================================
