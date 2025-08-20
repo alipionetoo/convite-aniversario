@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // --- Lógica de Login ---
     loginBtn.addEventListener('click', function() {
-        const mensagensErro = ["Pena, amigo. Desta vez não rolou.", "Hmmm, parece que você não está convidado🤭", "Acesso negado. Verifique o código ou o nível de amizade.", "Ou tu não foi convidado ou tu foi burro o suficiente para errar teu próprio nome animal"];
+        const mensagensErro = ["Pena, amigo. Desta vez não rolou.", "Hmmm, parece que você não está convidado🤭", "Acesso negado. Verifique o código ou o nível de amizade.", "Ou tu não foi convidado ou tu foi burro errando teu nome animal"];
         const codigoDigitado = codigoInput.value.trim().toLowerCase();
         if (!codigoDigitado) return;
         const convidadoEncontrado = convidados.find(c => c.codigo === codigoDigitado);
