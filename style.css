@@ -1,0 +1,94 @@
+/* Importando uma fonte divertida do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #00ff9d;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5em;
+  color: #00ff9d;
+  text-shadow: 3px 3px #ff00de;
+  margin-bottom: 0;
+}
+
+.subtitulo {
+  font-size: 1.1em;
+  color: #a0a0a0;
+  margin-top: 5px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 25px 0;
+  border: 3px solid #ff00de;
+}
+
+.info-box {
+  background-color: #333;
+  border-left: 5px solid #00ff9d;
+  padding: 15px;
+  margin: 20px auto;
+  text-align: left;
+  border-radius: 0 8px 8px 0;
+}
+
+hr {
+  border: 1px dashed #ff00de;
+  margin: 40px 0;
+}
+
+button {
+  background-color: #ff00de;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 0, 222, 0.5);
+}
+
+#confirmarBtn {
+    background-color: #00ff9d;
+    color: #1e1e1e;
+}
+
+#confirmarBtn:hover {
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.5);
+}
+
+.segredo {
+  display: none; /* Começa escondido */
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #d4d4d4;
+  font-size: 1.1em;
+  font-weight: bold;
+}
