@@ -4,213 +4,115 @@
 /* --- VARIÁVEIS DE COR DA PALETA GRÊMIO --- */
 :root {
     --gremio-azul: #0d80c3;
-    --gremio-preto: #1c2135; /* Um azul bem escuro */
+    --gremio-preto: #1c2135;
     --gremio-branco: #f1f1f1;
     --gremio-dourado: #facc15;
 }
 
 /* ESTILOS GERAIS */
 body {
-  background-color: var(--gremio-preto);
-  color: var(--gremio-branco);
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  margin: 0;
-  overflow-x: hidden;
+  background-color: var(--gremio-preto); color: var(--gremio-branco); font-family: 'Roboto', sans-serif; text-align: center; margin: 0; overflow-x: hidden;
 }
-
-/* Classes de controle de visibilidade e animação */
 .visible { display: flex; }
 .hidden { display: none; }
 .fade-out { animation: fadeOut 0.5s forwards; }
 .fade-in { animation: fadeIn 1s 0.5s forwards; opacity: 0; }
 
+/* --- PÁGINA DE LOGIN INICIAL COM EFEITOS ESPECIAIS --- */
+#landing-page { 
+    position: relative; 
+    height: 100vh; 
+    width: 100vw; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    overflow: hidden;
+}
+#landing-page h1, #login-area input, #login-area button { font-family: 'Oswald', sans-serif; text-transform: uppercase; z-index: 2; }
+#landing-page h1 { color: var(--gremio-azul); font-size: 3em; margin-bottom: 10px; }
+#landing-page p { color: #aaa; z-index: 2; }
+#login-area { margin-top: 30px; z-index: 2; }
+#login-area input { width: 100%; max-width: 350px; padding: 15px; font-size: 1.2em; border-radius: 5px; border: 2px solid var(--gremio-azul); background-color: #2a3447; color: var(--gremio-branco); text-align: center; }
+#login-area button { background-color: var(--gremio-azul); color: var(--gremio-branco); padding: 15px 30px; font-size: 1.2em; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 15px; animation: pulse 2.5s infinite; }
+.error-msg { color: #ff5252; margin-top: 10px; font-weight: bold; height: 20px; z-index: 2; }
 
-/* --- ETAPA 1: PÁGINA DE LOGIN INICIAL --- */
-#landing-page {
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    box-sizing: border-box;
-}
+/* --- LAYOUT DE 2 COLUNAS (CONTEÚDO PRINCIPAL) --- */
+.main-layout { display: grid; grid-template-columns: 320px 1fr; gap: 30px; padding: 20px; align-items: flex-start; }
+#sidebar { position: sticky; top: 20px; background-color: #2a3447; border-radius: 15px; padding: 20px; }
+#music-controls, #spotify-player { margin-bottom: 20px; }
+#music-controls button { background-color: var(--gremio-dourado); color: var(--gremio-preto); border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; text-transform: uppercase; }
+.spotify-link-btn { display: flex; justify-content: center; align-items: center; gap: 10px; background-color: #1DB954; color: var(--gremio-branco); padding: 15px; border-radius: 50px; text-decoration: none; font-weight: bold; text-transform: uppercase; transition: transform 0.2s; }
+.spotify-link-btn:hover { transform: scale(1.05); }
+.spotify-icon { width: 24px; height: 24px; }
 
-#landing-page h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    color: var(--gremio-azul);
-    text-shadow: 0 0 5px rgba(13, 128, 195, 0.7);
-    font-size: 3em;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-#landing-page p {
-    font-family: 'Roboto', sans-serif;
-    color: #aaa;
-    font-size: 1.1em;
-}
-
-#login-area {
-    margin-top: 30px;
-}
-
-#login-area input {
-    width: 100%;
-    max-width: 350px;
-    padding: 15px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    border: 2px solid var(--gremio-azul);
-    background-color: #2a3447;
-    color: var(--gremio-branco);
-    text-align: center;
-}
-
-#login-area button {
-    background-color: var(--gremio-azul);
-    color: var(--gremio-branco);
-    padding: 15px 30px;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: transform 0.2s;
-    text-transform: uppercase;
-}
-
-#login-area button:hover {
-    transform: scale(1.05);
-}
-
-.error-msg {
-    color: #ff5252;
-    margin-top: 10px;
-    font-weight: bold;
-    height: 20px;
-}
-
-/* --- ETAPA 2: CONTEÚDO PRINCIPAL DO CONVITE --- */
-#main-content {
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.container {
-  max-width: 700px;
-  margin: 20px auto;
-  background-color: #2a3447;
-  padding: 30px;
-  border-radius: 15px;
-  border: 2px solid var(--gremio-azul);
-}
-
-h2, h3, h4 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  color: var(--gremio-azul);
-  letter-spacing: 1px;
-}
-
-hr {
-  border: 1px dashed var(--gremio-azul);
-  margin: 40px 0;
-}
-
-/* Áreas de Boas-Vindas e Confirmação */
-#welcome-area {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--gremio-azul);
-}
-#welcome-area img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--gremio-azul);
-}
-#welcome-area h2 {
-    font-size: 2em;
-    margin: 15px 0 0 0;
-}
-
-.info-box {
-  background-color: #333;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px 0;
-  text-align: left;
-}
-
-#confirmation-area {
-    background-color: var(--gremio-preto);
-    border-radius: 8px;
-    padding: 25px;
-    margin-top: 30px;
-}
-#confirmation-area button {
-    background-color: var(--gremio-dourado);
-    color: var(--gremio-preto);
-    padding: 15px 30px;
-    font-size: 1.1em;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    text-transform: uppercase;
-}
+/* --- CONTEÚDO PRINCIPAL (ESTILO GRÊMIO PADRÃO) --- */
+#content-pane .container { max-width: 100%; margin: 0; padding: 30px; background-color: #2a3447; border-radius: 15px; border: 2px solid var(--gremio-azul); }
+h2, h3, h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; color: var(--gremio-azul); letter-spacing: 1px; }
+hr { border: 1px dashed var(--gremio-azul); margin: 40px 0; }
+#welcome-area { padding-bottom: 30px; margin-bottom: 30px; border-bottom: 2px solid var(--gremio-azul); }
+#welcome-area img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--gremio-azul); }
+#welcome-area h2 { font-size: 2em; margin: 15px 0 0 0; }
+.info-box { background-color: #333; padding: 20px; border-radius: 8px; margin: 20px 0; text-align: left; }
+#confirmation-area { background-color: var(--gremio-preto); border-radius: 8px; padding: 25px; margin-top: 30px; }
+#confirmation-area button { background-color: var(--gremio-dourado); color: var(--gremio-preto); padding: 15px 30px; font-size: 1.1em; font-weight: bold; border-radius: 8px; cursor: pointer; border: none; text-transform: uppercase; }
 
 /* Seção de Presentes e Vaquinha */
 .presentes-section .cliche{ font-style: italic; color: #aaa; }
 .lista-presentes { list-style: none; padding: 0; margin: 20px 0; }
 .lista-presentes li { background-color: #1c2135; padding: 12px; border-radius: 5px; margin-bottom: 8px; }
-
-.vaquinha-container {
-    background-color: var(--gremio-preto);
-    border: 3px solid var(--gremio-dourado);
-    box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 8px;
-}
+.vaquinha-container { background-color: var(--gremio-preto); border: 3px solid var(--gremio-dourado); box-shadow: 0 0 20px rgba(250, 204, 21, 0.3); margin-top: 30px; padding: 20px; border-radius: 8px; }
 .vaquinha-container h4 { color: var(--gremio-dourado); }
-
 .product-card { display: flex; align-items: center; gap: 20px; background-color: #2a3447; padding: 15px; border-radius: 8px; margin: 25px 0; text-align: left; }
 .product-image img { max-width: 120px; border-radius: 8px; border: 2px solid var(--gremio-azul); }
 .product-info h5 { margin: 0 0 10px 0; font-size: 1.1em; color: white; font-family: 'Roboto', sans-serif; text-transform: none; }
 .product-info .price { font-size: 1.5em; font-weight: bold; color: var(--gremio-branco); margin: 0 0 15px 0; }
-.product-info .product-link { display: inline-block; background-color: var(--gremio-azul); color: white; padding: 8px 12px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; transition: background-color 0.2s; }
-.product-info .product-link:hover { background-color: #0b5ed7; }
-
-.progress-bar { background-color: #444; border-radius: 20px; padding: 4px; }
-.inner-bar { background: var(--gremio-azul); height: 20px; border-radius: 15px; width: 85%; transition: width 1.5s ease-out; }
-.stats { font-size: 0.9em; margin-top: 8px; }
+.product-info .product-link { display: inline-block; background-color: var(--gremio-azul); color: white; padding: 8px 12px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em; }
 #apoiarVaquinhaBtn { background-color: var(--gremio-dourado); color: var(--gremio-preto); width: 100%; font-size: 1.2em; padding: 15px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; text-transform: uppercase;}
 .vaquinha-resposta { margin-top: 15px; font-weight: bold; color: var(--gremio-dourado); }
+.progress-bar { background-color: #444; border-radius: 20px; padding: 4px; }
+.inner-bar { background: var(--gremio-azul); height: 20px; border-radius: 15px; width: 100%; transition: transform 0.5s ease-out; }
+#apoiarVaquinhaBtn:active + .vaquinha-resposta .inner-bar { transform: scaleX(1.05); }
+.stats { font-size: 0.9em; margin-top: 8px; }
 
-/* --- Modais --- */
+/* Modais */
 .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);display:none;justify-content:center;align-items:center;z-index:1000;}
-.modal-content{background-color:#2a3447;padding:30px;border-radius:15px;border:2px solid var(--gremio-azul);text-align:center;width:90%;max-width:400px;position:relative;}
-.modal-botoes button{border:none;padding:10px 20px;font-size:1em;font-weight:bold;border-radius:8px;cursor:pointer;margin:10px 5px;}
-#modal-sim{background-color:var(--gremio-azul);color:var(--gremio-branco);}
-#modal-nao{background-color:#555;color:var(--gremio-branco);}
+.modal-content{background-color:#2a3447;padding:30px;border-radius:15px;border:2px solid var(--gremio-azul);text-align:center;width:90%;max-width:400px;position:relative;animation: fadeIn 0.3s;}
+.modal-botoes { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+.modal-botoes button { flex-basis: 150px; border: 2px solid; padding: 12px 20px; font-size: 0.9em; font-weight: bold; border-radius: 8px; cursor: pointer; text-transform: uppercase; transition: all 0.2s ease-in-out; }
+#modal-sim { background-color: var(--gremio-azul); color: var(--gremio-branco); border-color: var(--gremio-azul); }
+#modal-sim:hover { background-color: #1E90FF; border-color: #1E90FF; transform: translateY(-2px); }
+#modal-nao { background-color: transparent; color: #ccc; border-color: #777; }
+#modal-nao:hover { background-color: #777; color: var(--gremio-preto); }
+.modal-botoes button:active { transform: translateY(0) scale(0.97); }
+.modal-botoes button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; background-color: #555 !important; border-color: #555 !important; color: #999 !important; }
 
-/* --- ANIMAÇÕES --- */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+/* --- ANIMAÇÕES (AGORA FOCADAS NA TELA DE LOGIN) --- */
+.typing-effect {
+    border-right: .15em solid var(--gremio-azul); white-space: nowrap; overflow: hidden; margin: 0 auto; animation: typing 2s steps(20, end), blink-caret .75s step-end infinite;
+}
+#landing-page::after {
+    content: " "; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    z-index: 1; pointer-events: none; animation: flicker 0.15s infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--gremio-azul); } }
+@keyframes flicker { 0% { opacity: 0.27 } 5% { opacity: 0.34 } 10% { opacity: 0.92 } 15% { opacity: 0.13 } 20% { opacity: 0.44 } 25% { opacity: 0.48 } 30% { opacity: 0.25 } 35% { opacity: 0.94 } 40% { opacity: 0.81 } 45% { opacity: 0.29 } 50% { opacity: 0.48 } 55% { opacity: 0.17 } 60% { opacity: 0.43 } 65% { opacity: 0.98 } 70% { opacity: 0.14 } 75% { opacity: 0.40 } 80% { opacity: 0.52 } 85% { opacity: 0.11 } 90% { opacity: 0.84 } 95% { opacity: 0.12 } 100% { opacity: 0.42 } }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
 @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- AJUSTES DE RESPONSIVIDADE PARA CELULAR --- */
+/* --- RESPONSIVIDADE PARA CELULAR --- */
+@media (max-width: 1024px) {
+    .main-layout { grid-template-columns: 1fr; }
+    #sidebar { position: static; order: 1; }
+}
 @media (max-width: 600px) {
     #landing-page h1 { font-size: 2.2em; }
-    .container { padding: 20px; }
-    h2 { font-size: 1.5em; }
-    #welcome-area h2 { font-size: 1.8em; }
+    .container { padding: 15px; }
+    h2, #welcome-area h2 { font-size: 1.5em; }
     .product-card { flex-direction: column; text-align: center; }
-    .product-image img { max-width: 150px; }
-    .product-info { width: 100%; }
 }
