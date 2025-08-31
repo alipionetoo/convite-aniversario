@@ -31,7 +31,7 @@ const convidados = [
     { codigo: 'manoel', nome: 'Tita', foto: 'fotos/tita.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do meu afilhado (o maior)', msgNao: 'sou uma baita corno também e não vou pq sou corno (muito corno, mais que a joana)' },
     { codigo: 'joão', nome: 'João', foto: 'fotos/joao.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO ALIPIO', msgNao: 'sou um baita corno e não vou pq sou corno (muito corno)' },
     { codigo: 'luccas', nome: 'Luccas, o priv', foto: 'fotos/luccas.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO ALIPOYD', msgNao: 'sou um baita corno e não vou pq sou corno (muito corno)' },
-    { codigo: 'Taylise', nome: 'Taylise', foto: 'fotos/taylise.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO LINDO ALIPIIO', msgNao: 'sou vacilona, não gosto de ti e não vou no teu aniversário' },
+    { codigo: 'taylise', nome: 'Taylise', foto: 'fotos/taylise.jpg', msgSim: 'óbvio que vou né meu, como não vou no aniversario do MAGNíFICO LINDO ALIPIIO', msgNao: 'sou vacilona, não gosto de ti e não vou no teu aniversário' },
 ];
 
 // ===================================================================
